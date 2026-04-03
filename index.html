@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Video Vision | 我的作品集</title>
+    <style>
+        :root {
+            --bg: #050505;
+            --card-bg: #111;
+            --accent: #00f2ff; /* 科技蓝 */
+            --text-main: #ffffff;
+            --text-dim: #888;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* 导航栏 */
+        nav {
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #222;
+        }
+
+        .logo { font-weight: 800; font-size: 1.5rem; letter-spacing: -1px; }
+        .logo span { color: var(--accent); }
+
+        /* 英雄区 */
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background: radial-gradient(circle at center, #111 0%, #050505 100%);
+        }
+
+        header h1 { font-size: 3rem; margin: 0; }
+        header p { color: var(--text-dim); max-width: 600px; margin: 10px auto; }
+
+        /* 视频网格 */
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 30px;
+        }
+
+        /* 作品卡片 */
+        .work-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #222;
+            transition: all 0.4s ease;
+        }
+
+        .work-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 242, 255, 0.1);
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9; /* 可根据需要改为 9/16 */
+            background: #000;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .info {
+            padding: 20px;
+        }
+
+        .tool-tag {
+            display: inline-block;
+            font-size: 10px;
+            text-transform: uppercase;
+            background: rgba(0, 242, 255, 0.1);
+            color: var(--accent);
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .info h3 { margin: 0 0 10px 0; font-size: 1.2rem; }
+        
+        .prompt-box {
+            background: #1a1a1a;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: #aaa;
+            border-left: 3px solid #333;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            .container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">AI<span>VISION</span></div>
+    <div>Portfolio 2024</div>
+</nav>
+
+<header>
+    <h1>探索 AI 影像边界</h1>
+    <p>使用 Kling, Runway, Luma 等前沿 AI 模型构建的视觉实验作品集</p>
+</header>
+
+<div class="container">
+    
+    <!-- 作品 1 -->
+    <div class="work-card">
+        <div class="video-wrapper">
+            <!-- 替换为你的视频文件路径或链接 -->
+            <video 
+                src="your-video-1.mp4" 
+                muted loop playsinline 
+                onmouseover="this.play()" 
+                onmouseout="this.pause()">
+            </video>
+        </div>
+        <div class="info">
+            <span class="tool-tag">Kling AI 1.5</span>
+            <h3>赛博朋克霓虹雨夜</h3>
+            <div class="prompt-box">
+                <strong>Prompt:</strong> Cinematic shot of a rainy neon street in Tokyo, 8k, hyper-realistic, volumetric lighting...
+            </div>
+        </div>
+    </div>
+
+    <!-- 作品 2 -->
+    <div class="work-card">
+        <div class="video-wrapper">
+            <video 
+                src="your-video-2.mp4" 
+                muted loop playsinline 
+                onmouseover="this.play()" 
+                onmouseout="this.pause()">
+            </video>
+        </div>
+        <div class="info">
+            <span class="tool-tag">Runway Gen-3</span>
+            <h3>云端上的漂浮城市</h3>
+            <div class="prompt-box">
+                <strong>Prompt:</strong> Surreal landscape of a floating city above the clouds, golden hour, dreamlike...
+            </div>
+        </div>
+    </div>
+
+    <!-- 作品 3 -->
+    <div class="work-card">
+        <div class="video-wrapper">
+            <video 
+                src="your-video-3.mp4" 
+                muted loop playsinline 
+                onmouseover="this.play()" 
+                onmouseout="this.pause()">
+            </video>
+        </div>
+        <div class="info">
+            <span class="tool-tag">Luma Dream Machine</span>
+            <h3>极地极光特写</h3>
+            <div class="prompt-box">
+                <strong>Prompt:</strong> Close up of a polar bear looking at aurora borealis, majestic, high detail...
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer style="text-align: center; padding: 60px; color: #444; font-size: 0.8rem;">
+    由 AI 创作者提供技术支持
+</footer>
+
+</body>
+</html>
