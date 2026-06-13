@@ -70,11 +70,9 @@
 
         .category-header h2 { font-size: 2.2rem; margin: 0; }
 
-        /* 调整格子的基础宽度 */
         .container {
             display: grid;
-            /* 这里的 600px 可以根据你的喜好调大或调小 */
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+            grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); 
             gap: 40px;
             align-items: start;
         }
@@ -99,7 +97,6 @@
             background: #000;
         }
 
-        /* 比例控制类名 */
         .video-wrapper.landscape { aspect-ratio: 16/9; }
         .video-wrapper.portrait { aspect-ratio: 9/16; }
 
@@ -141,6 +138,7 @@
     <div class="nav-links">
         <a href="#live-action">AI真人剧</a>
         <a href="#comics">动态漫</a>
+        <a href="#creative-ads">创意广告</a>
     </div>
 </nav>
 
@@ -149,91 +147,56 @@
     <p>混合比例艺术：从 16:9 电影镜头到 9:16 竖屏短剧</p>
 </header>
 
+<!-- 第一部分：AI真人剧 -->
 <section id="live-action" class="category-section">
     <div class="category-header">
         <h2>🎥 AI 真人剧系列</h2>
     </div>
-
     <div class="container">
-        <!-- 01 横屏 -->
         <div class="work-card">
-            <div class="video-wrapper landscape">
-                <video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781326221/6%E6%9C%8812%E6%97%A5_4_1_oimovn.mp4" controls playsinline></video>
-            </div>
-            <div class="info">
-                <span class="tool-tag">NEW ACTION 01</span>
-                <h3>真人剧项目 01</h3>
-            </div>
+            <div class="video-wrapper landscape"><video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781326221/6%E6%9C%8812%E6%97%A5_4_1_oimovn.mp4" controls playsinline></video></div>
+            <div class="info"><h3>真人剧项目 01</h3></div>
         </div>
-
-        <!-- 02-05 竖屏 -->
         <div class="work-card">
-            <div class="video-wrapper portrait">
-                <video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781320035/41_gp6as6.mp4" controls playsinline></video>
-            </div>
-            <div class="info"><span class="tool-tag">9:16 VERTICAL</span><h3>真人剧项目 02</h3></div>
+            <div class="video-wrapper portrait"><video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781320035/41_gp6as6.mp4" controls playsinline></video></div>
+            <div class="info"><h3>真人剧项目 02</h3></div>
         </div>
-
         <div class="work-card">
-            <div class="video-wrapper portrait">
-                <video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781326278/6%E6%9C%8812%E6%97%A5_4_2_zx59b3.mp4" controls playsinline></video>
-            </div>
-            <div class="info"><span class="tool-tag">9:16 VERTICAL</span><h3>真人剧项目 03</h3></div>
+            <div class="video-wrapper portrait"><video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781326278/6%E6%9C%8812%E6%97%A5_4_2_zx59b3.mp4" controls playsinline></video></div>
+            <div class="info"><h3>真人剧项目 03</h3></div>
         </div>
-
         <div class="work-card">
-            <div class="video-wrapper portrait">
-                <video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781326222/%E4%BA%891_argwg6.mp4" controls playsinline></video>
-            </div>
-            <div class="info"><span class="tool-tag">9:16 VERTICAL</span><h3>真人剧项目 04</h3></div>
+            <div class="video-wrapper portrait"><video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781326222/%E4%BA%891_argwg6.mp4" controls playsinline></video></div>
+            <div class="info"><h3>真人剧项目 04</h3></div>
         </div>
-
         <div class="work-card">
-            <div class="video-wrapper portrait">
-                <video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781322077/%E5%AF%8C%E4%BA%8C%E4%BB%A3_ev0t8c.mp4" controls playsinline></video>
-            </div>
-            <div class="info"><span class="tool-tag">9:16 VERTICAL</span><h3>真人剧项目 05</h3></div>
+            <div class="video-wrapper portrait"><video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781322077/%E5%AF%8C%E4%BA%8C%E4%BB%A3_ev0t8c.mp4" controls playsinline></video></div>
+            <div class="info"><h3>真人剧项目 05</h3></div>
         </div>
-
-        <!-- 06 现在改成了竖屏 portrait -->
         <div class="work-card">
-            <div class="video-wrapper portrait">
-                <iframe src="//player.bilibili.com/player.html?bvid=BV1nY9uBcEmr&page=1&high_quality=1&danmaku=0" scrolling="no" allowfullscreen="true"></iframe>
-            </div>
-            <div class="info"><span class="tool-tag">9:16 VERTICAL</span><h3>保姆的秘密遗产</h3></div>
+            <div class="video-wrapper portrait"><iframe src="//player.bilibili.com/player.html?bvid=BV1nY9uBcEmr&page=1&high_quality=1" scrolling="no" allowfullscreen="true"></iframe></div>
+            <div class="info"><h3>保姆的秘密遗产</h3></div>
         </div>
-
-        <!-- 07-10 竖屏 -->
         <div class="work-card">
-            <div class="video-wrapper portrait">
-                <iframe src="//player.bilibili.com/player.html?bvid=BV1pk9KB4EUP&page=1" scrolling="no" allowfullscreen="true"></iframe>
-            </div>
-            <div class="info"><span class="tool-tag">9:16 VERTICAL</span><h3>血坠少女</h3></div>
+            <div class="video-wrapper portrait"><iframe src="//player.bilibili.com/player.html?bvid=BV1pk9KB4EUP&page=1" scrolling="no" allowfullscreen="true"></iframe></div>
+            <div class="info"><h3>血坠少女</h3></div>
         </div>
-
         <div class="work-card">
-            <div class="video-wrapper portrait">
-                <iframe src="//player.bilibili.com/player.html?bvid=BV1zQ9KBnEGX&page=1" scrolling="no" allowfullscreen="true"></iframe>
-            </div>
-            <div class="info"><span class="tool-tag">9:16 VERTICAL</span><h3>我领养的每只宠物</h3></div>
+            <div class="video-wrapper portrait"><iframe src="//player.bilibili.com/player.html?bvid=BV1zQ9KBnEGX&page=1" scrolling="no" allowfullscreen="true"></iframe></div>
+            <div class="info"><h3>我领养的每只宠物</h3></div>
         </div>
-
         <div class="work-card">
-            <div class="video-wrapper portrait">
-                <iframe src="//player.bilibili.com/player.html?bvid=BV1A69KBZEXU&page=1" scrolling="no" allowfullscreen="true"></iframe>
-            </div>
-            <div class="info"><span class="tool-tag">9:16 VERTICAL</span><h3>血色将至</h3></div>
+            <div class="video-wrapper portrait"><iframe src="//player.bilibili.com/player.html?bvid=BV1A69KBZEXU&page=1" scrolling="no" allowfullscreen="true"></iframe></div>
+            <div class="info"><h3>血色将至</h3></div>
         </div>
-
         <div class="work-card">
-            <div class="video-wrapper portrait">
-                <iframe src="//player.bilibili.com/player.html?bvid=BV1MgDrBsE5x&page=1" scrolling="no" allowfullscreen="true"></iframe>
-            </div>
-            <div class="info"><span class="tool-tag">9:16 VERTICAL</span><h3>她的吻</h3></div>
+            <div class="video-wrapper portrait"><iframe src="//player.bilibili.com/player.html?bvid=BV1MgDrBsE5x&page=1" scrolling="no" allowfullscreen="true"></iframe></div>
+            <div class="info"><h3>她的吻</h3></div>
         </div>
     </div>
 </section>
 
+<!-- 第二部分：动态漫系列 -->
 <section id="comics" class="category-section">
     <div class="category-header">
         <h2>🎬 动态漫系列</h2>
@@ -242,6 +205,36 @@
         <div class="work-card"><div class="video-wrapper landscape"><iframe src="//player.bilibili.com/player.html?bvid=BV1kC9KB9ET1&page=1" scrolling="no" allowfullscreen="true"></iframe></div><div class="info"><h3>猫仙</h3></div></div>
         <div class="work-card"><div class="video-wrapper landscape"><iframe src="//player.bilibili.com/player.html?bvid=BV1UL9uBrE6k&page=1" scrolling="no" allowfullscreen="true"></iframe></div><div class="info"><h3>弟子们都想以下犯上</h3></div></div>
         <div class="work-card"><div class="video-wrapper landscape"><iframe src="https://player.cloudinary.com/embed/?cloud_name=dakas72xv&public_id=15_hywwpa" allowfullscreen="true"></iframe></div><div class="info"><h3>华夏入侵</h3></div></div>
+    </div>
+</section>
+
+<!-- 第三部分：AI创意短片与广告 -->
+<section id="creative-ads" class="category-section">
+    <div class="category-header">
+        <h2>🎨 AI 创意短片与广告</h2>
+    </div>
+    <div class="container">
+        <!-- 广告作品 01 -->
+        <div class="work-card">
+            <div class="video-wrapper landscape">
+                <video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781320113/%E9%B2%B8%E9%B1%BC%E7%88%B8%E7%88%B8%E5%B9%BF%E5%91%8A%E5%AE%A3%E4%BC%A0%E7%89%87_chuylj.mp4" controls playsinline></video>
+            </div>
+            <div class="info">
+                <span class="tool-tag">ADVERTISING</span>
+                <h3>鲸鱼爸爸广告宣传片</h3>
+            </div>
+        </div>
+
+        <!-- 广告作品 02 -->
+        <div class="work-card">
+            <div class="video-wrapper landscape">
+                <video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781320280/%E5%BE%AE%E4%BF%A1%E8%A7%86%E9%A2%912026-06-11_200212_380_wf2ac2.mp4" controls playsinline></video>
+            </div>
+            <div class="info">
+                <span class="tool-tag">CREATIVE</span>
+                <h3>AI 创意短片作品</h3>
+            </div>
+        </div>
     </div>
 </section>
 
