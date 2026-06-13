@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Video Vision | 我的作品集</title>
+    <title>AI Video Vision | 欧阳智威作品集</title>
     <style>
         :root {
             --bg: #050505;
@@ -16,7 +16,7 @@
         body {
             background-color: var(--bg);
             color: var(--text-main);
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', -apple-system, sans-serif;
             margin: 0;
             line-height: 1.6;
             scroll-behavior: smooth;
@@ -35,7 +35,7 @@
             z-index: 100;
         }
 
-        .logo { font-weight: 800; font-size: 1.5rem; }
+        .logo { font-weight: 800; font-size: 1.5rem; letter-spacing: -1px; }
         .logo span { color: var(--accent); }
 
         .nav-links a {
@@ -43,7 +43,9 @@
             text-decoration: none;
             margin-left: 20px;
             font-size: 0.9rem;
+            transition: color 0.3s;
         }
+        .nav-links a:hover { color: var(--accent); }
 
         header {
             text-align: center;
@@ -52,6 +54,7 @@
         }
 
         header h1 { font-size: 3.5rem; margin: 0; background: linear-gradient(to right, #fff, var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        header p { color: var(--text-dim); margin-top: 10px; }
 
         .category-section {
             max-width: 1300px;
@@ -65,10 +68,13 @@
             margin-bottom: 30px;
         }
 
+        .category-header h2 { font-size: 2rem; margin: 0; }
+
+        /* 网格布局 */
         .container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* 减小了最小宽度以适应竖屏混合排版 */
+            gap: 30px;
         }
 
         .work-card {
@@ -77,18 +83,28 @@
             overflow: hidden;
             border: 1px solid #222;
             transition: all 0.4s ease;
+            height: fit-content;
         }
 
         .work-card:hover {
             border-color: var(--accent);
-            transform: translateY(-10px);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 242, 255, 0.1);
         }
 
+        /* 默认横屏容器 16:9 */
         .video-wrapper {
             position: relative;
             width: 100%;
             aspect-ratio: 16/9;
             background: #000;
+        }
+
+        /* 竖屏专用容器 9:16 */
+        .video-wrapper.portrait {
+            aspect-ratio: 9/16;
+            max-width: 450px; /* 限制竖屏宽度防止在大屏上过高 */
+            margin: 0 auto;
         }
 
         .video-wrapper video, .video-wrapper iframe {
@@ -100,31 +116,31 @@
             border: none;
         }
 
-        .info { padding: 25px; }
-
+        .info { padding: 20px; }
         .tool-tag {
             display: inline-block;
             font-size: 11px;
             background: rgba(0, 242, 255, 0.1);
             color: var(--accent);
-            padding: 4px 10px;
-            border-radius: 6px;
-            margin-bottom: 12px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-bottom: 10px;
             font-weight: bold;
         }
 
+        .info h3 { margin: 0 0 10px 0; font-size: 1.2rem; }
         .prompt-box {
             background: #1a1a1a;
-            padding: 12px;
-            border-radius: 10px;
-            font-size: 0.9rem;
-            color: #ccc;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: #aaa;
             border-left: 3px solid #333;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             .container { grid-template-columns: 1fr; }
-            header h1 { font-size: 2.5rem; }
+            header h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
@@ -140,95 +156,94 @@
 
 <header>
     <h1>欧阳智威 AI 影像作品集</h1>
-    <p>探索 AI 影像的无限可能</p>
+    <p>探索 AI 在横屏电影与竖屏短剧中的视觉表现力</p>
 </header>
 
 <section id="live-action" class="category-section">
     <div class="category-header">
         <h2>🎥 AI 真人剧系列</h2>
     </div>
+
     <div class="container">
-        <!-- 项目 01 -->
+        <!-- 项目 01 - 横屏 -->
         <div class="work-card">
             <div class="video-wrapper">
                 <video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781326221/6%E6%9C%8812%E6%97%A5_4_1_oimovn.mp4" controls playsinline style="object-fit: cover;"></video>
             </div>
             <div class="info">
-                <span class="tool-tag">NEW ACTION 01</span>
-                <h3>真人剧项目 01（烛龙）</h3>
-                <div class="prompt-box">基于 Cloudinary 托管的高清写实作品。</div>
+                <span class="tool-tag">LANDSCAPE</span>
+                <h3>真人剧项目 01</h3>
+                <div class="prompt-box">横屏电影级画质展示。</div>
             </div>
         </div>
 
-        <!-- 项目 02 -->
+        <!-- 项目 02 - 竖屏 -->
         <div class="work-card">
-            <div class="video-wrapper">
+            <div class="video-wrapper portrait">
                 <video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781320035/41_gp6as6.mp4" controls playsinline style="object-fit: cover;"></video>
             </div>
             <div class="info">
-                <span class="tool-tag">NEW ACTION 02</span>
-                <h3>真人剧项目 02（全县每人每天给我一元）</h3>
-                <div class="prompt-box">AI 视频生成中的光影实验。</div>
+                <span class="tool-tag">VERTICAL SHORTS</span>
+                <h3>真人剧项目 02 (竖屏短剧)</h3>
+                <div class="prompt-box">AI 竖屏影像实验。</div>
             </div>
         </div>
 
-        <!-- 项目 03 -->
+        <!-- 项目 03 - 竖屏 -->
         <div class="work-card">
-            <div class="video-wrapper">
+            <div class="video-wrapper portrait">
                 <video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781326278/6%E6%9C%8812%E6%97%A5_4_2_zx59b3.mp4" controls playsinline style="object-fit: cover;"></video>
             </div>
             <div class="info">
-                <span class="tool-tag">NEW ACTION 03</span>
-                <h3>真人剧项目 03（争宠姨娘）</h3>
-                <div class="prompt-box">写实场景的动态连贯性测试。</div>
+                <span class="tool-tag">VERTICAL SHORTS</span>
+                <h3>真人剧项目 03 (竖屏短剧)</h3>
+                <div class="prompt-box">竖屏构图优化展示。</div>
             </div>
         </div>
 
-        <!-- 项目 04 -->
+        <!-- 项目 04 - 竖屏 -->
         <div class="work-card">
-            <div class="video-wrapper">
+            <div class="video-wrapper portrait">
                 <video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781326222/%E4%BA%891_argwg6.mp4" controls playsinline style="object-fit: cover;"></video>
             </div>
             <div class="info">
-                <span class="tool-tag">NEW ACTION 04</span>
-                <h3>真人剧项目 04（夺我兵权你说的，皇位掉了你哭什么）</h3>
-                <div class="prompt-box">高动态竞争场景视觉表现。</div>
+                <span class="tool-tag">VERTICAL SHORTS</span>
+                <h3>真人剧项目 04 (竖屏短剧)</h3>
+                <div class="prompt-box">快节奏竖屏剪辑测试。</div>
             </div>
         </div>
 
-        <!-- 项目 05 -->
+        <!-- 项目 05 - 竖屏 -->
         <div class="work-card">
-            <div class="video-wrapper">
+            <div class="video-wrapper portrait">
                 <video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781322077/%E5%AF%8C%E4%BA%8C%E4%BB%A3_ev0t8c.mp4" controls playsinline style="object-fit: cover;"></video>
             </div>
             <div class="info">
-                <span class="tool-tag">NEW ACTION 05</span>
-                <h3>真人剧项目 05（大一开学，你怎么成武帝了）</h3>
-                <div class="prompt-box">电影感叙事实验作品。</div>
+                <span class="tool-tag">VERTICAL SHORTS</span>
+                <h3>真人剧项目 05 (竖屏短剧)</h3>
+                <div class="prompt-box">角色叙事竖屏短剧。</div>
             </div>
         </div>
 
-        <!-- 项目 06 (原 01) -->
+        <!-- 项目 06 - 横屏 (B站嵌入) -->
         <div class="work-card">
             <div class="video-wrapper">
                 <iframe src="//player.bilibili.com/player.html?bvid=BV1nY9uBcEmr&page=1&high_quality=1&danmaku=0" scrolling="no" allowfullscreen="true"></iframe>
             </div>
             <div class="info">
-                <span class="tool-tag">ACTION 06</span>
-                <h3>真人剧项目 06（保姆的秘密遗产）</h3>
-                <div class="prompt-box">室内复杂场景光影控制。</div>
+                <span class="tool-tag">ACTION</span>
+                <h3>真人剧项目 06 (保姆的秘密)</h3>
             </div>
         </div>
 
-        <!-- 原 02-05 依次排列 -->
+        <!-- 后续项目 07-10 保持默认横屏结构 -->
         <div class="work-card">
             <div class="video-wrapper">
                 <iframe src="https://player.bilibili.com/player.html?bvid=BV1pk9KB4EUP&page=1" scrolling="no" allowfullscreen="true"></iframe>
             </div>
             <div class="info">
-                <span class="tool-tag">ACTION 07</span>
-                <h3>真人剧项目 07（血坠少女）</h3>
-                <div class="prompt-box">写实人像极端光影实验。</div>
+                <span class="tool-tag">ACTION</span>
+                <h3>真人剧项目 07</h3>
             </div>
         </div>
 
@@ -237,9 +252,8 @@
                 <iframe src="https://player.bilibili.com/player.html?bvid=BV1zQ9KBnEGX&page=1" scrolling="no" allowfullscreen="true"></iframe>
             </div>
             <div class="info">
-                <span class="tool-tag">ACTION 08</span>
-                <h3>真人剧项目 08（我领养的宠物）</h3>
-                <div class="prompt-box">角色转换与稳定性测试。</div>
+                <span class="tool-tag">ACTION</span>
+                <h3>真人剧项目 08</h3>
             </div>
         </div>
 
@@ -248,9 +262,8 @@
                 <iframe src="https://player.bilibili.com/player.html?bvid=BV1A69KBZEXU&page=1" scrolling="no" allowfullscreen="true"></iframe>
             </div>
             <div class="info">
-                <span class="tool-tag">ACTION 09</span>
-                <h3>真人剧项目 09（血色将至）</h3>
-                <div class="prompt-box">电影感大场景渲染。</div>
+                <span class="tool-tag">ACTION</span>
+                <h3>真人剧项目 09</h3>
             </div>
         </div>
 
@@ -259,9 +272,8 @@
                 <iframe src="https://player.bilibili.com/player.html?bvid=BV1MgDrBsE5x&page=1" scrolling="no" allowfullscreen="true"></iframe>
             </div>
             <div class="info">
-                <span class="tool-tag">ACTION 10</span>
-                <h3>真人剧项目 10（她的吻）</h3>
-                <div class="prompt-box">面部肌肉动态细微调整。</div>
+                <span class="tool-tag">ACTION</span>
+                <h3>真人剧项目 10</h3>
             </div>
         </div>
     </div>
@@ -278,35 +290,3 @@
             </div>
             <div class="info">
                 <span class="tool-tag">COMIC 01</span>
-                <h3>动态漫项目 01（猫仙）</h3>
-            </div>
-        </div>
-
-        <div class="work-card">
-            <div class="video-wrapper">
-                <iframe src="https://player.bilibili.com/player.html?bvid=BV1UL9uBrE6k&page=1" scrolling="no" allowfullscreen="true"></iframe>
-            </div>
-            <div class="info">
-                <span class="tool-tag">COMIC 02</span>
-                <h3>动态漫项目 02（弟子以下犯上）</h3>
-            </div>
-        </div>
-
-        <div class="work-card">
-            <div class="video-wrapper">
-                <iframe src="https://player.cloudinary.com/embed/?cloud_name=dakas72xv&public_id=15_hywwpa" allowfullscreen="true"></iframe>
-            </div>
-            <div class="info">
-                <span class="tool-tag">COMIC 03</span>
-                <h3>动态漫项目 03（华夏入侵）</h3>
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <p style="text-align: center; padding: 40px; color: #444; font-size: 0.8rem;">&copy; 2024 AI VISION Portfolio. Powered by Cloudinary & Bilibili</p>
-</footer>
-
-</body>
-</html>
