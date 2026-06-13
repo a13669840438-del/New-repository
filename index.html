@@ -22,7 +22,6 @@
             scroll-behavior: smooth;
         }
 
-        /* 导航栏 */
         nav {
             padding: 1.5rem 2rem;
             display: flex;
@@ -48,7 +47,6 @@
         }
         .nav-links a:hover { color: var(--accent); }
 
-        /* 标题区 */
         header {
             text-align: center;
             padding: 100px 20px;
@@ -58,7 +56,6 @@
         header h1 { font-size: 3.5rem; margin: 0; background: linear-gradient(to right, #fff, var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         header p { color: var(--text-dim); margin-top: 15px; font-size: 1.1rem; }
 
-        /* 分类区块 */
         .category-section {
             max-width: 1400px;
             margin: 0 auto;
@@ -73,13 +70,15 @@
 
         .category-header h2 { font-size: 2.2rem; margin: 0; }
 
-        /* 核心网格布局 - 回归 600px 统一排版 */
+        /* --- 调大小的核心代码开始 --- */
         .container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            /* 这里的 600px 可以手动调小（如 450px）让排版更紧凑 */
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); 
             gap: 40px;
-            align-items: start; /* 顶部对齐，防止竖屏拉伸 */
+            align-items: start;
         }
+        /* --- 调大小的核心代码结束 --- */
 
         .work-card {
             background: var(--card-bg);
@@ -95,17 +94,14 @@
             box-shadow: 0 20px 40px rgba(0, 242, 255, 0.15);
         }
 
-        /* 视频容器设置 */
         .video-wrapper {
             position: relative;
             width: 100%;
             background: #000;
         }
 
-        /* 横屏 16:9 */
+        /* 比例控制 */
         .video-wrapper.landscape { aspect-ratio: 16/9; }
-
-        /* 竖屏 9:16 */
         .video-wrapper.portrait { aspect-ratio: 9/16; }
 
         .video-wrapper video, .video-wrapper iframe {
@@ -118,7 +114,6 @@
             object-fit: cover;
         }
 
-        /* 文字信息 */
         .info { padding: 25px; }
         .tool-tag {
             display: inline-block;
@@ -133,14 +128,6 @@
         }
 
         .info h3 { margin: 0 0 10px 0; font-size: 1.4rem; color: #fff; }
-        .prompt-box {
-            background: #1a1a1a;
-            padding: 15px;
-            border-radius: 12px;
-            font-size: 0.9rem;
-            color: #ccc;
-            border-left: 4px solid #333;
-        }
 
         @media (max-width: 768px) {
             .container { grid-template-columns: 1fr; }
@@ -163,14 +150,13 @@
     <p>混合比例艺术：从 16:9 电影镜头到 9:16 竖屏短剧</p>
 </header>
 
-<!-- 真人剧部分 -->
 <section id="live-action" class="category-section">
     <div class="category-header">
         <h2>🎥 AI 真人剧系列</h2>
     </div>
 
     <div class="container">
-        <!-- 项目 01 - 横屏 -->
+        <!-- 01 横屏 -->
         <div class="work-card">
             <div class="video-wrapper landscape">
                 <video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781326221/6%E6%9C%8812%E6%97%A5_4_1_oimovn.mp4" controls playsinline></video>
@@ -181,141 +167,83 @@
             </div>
         </div>
 
-        <!-- 项目 02 - 竖屏 -->
+        <!-- 02-05 已经是竖屏 -->
         <div class="work-card">
             <div class="video-wrapper portrait">
                 <video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781320035/41_gp6as6.mp4" controls playsinline></video>
             </div>
-            <div class="info">
-                <span class="tool-tag">9:16 VERTICAL</span>
-                <h3>真人剧项目 02</h3>
-            </div>
+            <div class="info"><span class="tool-tag">9:16 VERTICAL</span><h3>真人剧项目 02</h3></div>
         </div>
 
-        <!-- 项目 03 - 竖屏 -->
         <div class="work-card">
             <div class="video-wrapper portrait">
                 <video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781326278/6%E6%9C%8812%E6%97%A5_4_2_zx59b3.mp4" controls playsinline></video>
             </div>
-            <div class="info">
-                <span class="tool-tag">9:16 VERTICAL</span>
-                <h3>真人剧项目 03</h3>
-            </div>
+            <div class="info"><span class="tool-tag">9:16 VERTICAL</span><h3>真人剧项目 03</h3></div>
         </div>
 
-        <!-- 项目 04 - 竖屏 -->
         <div class="work-card">
             <div class="video-wrapper portrait">
                 <video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781326222/%E4%BA%891_argwg6.mp4" controls playsinline></video>
             </div>
-            <div class="info">
-                <span class="tool-tag">9:16 VERTICAL</span>
-                <h3>真人剧项目 04</h3>
-            </div>
+            <div class="info"><span class="tool-tag">9:16 VERTICAL</span><h3>真人剧项目 04</h3></div>
         </div>
 
-        <!-- 项目 05 - 竖屏 -->
         <div class="work-card">
             <div class="video-wrapper portrait">
                 <video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781322077/%E5%AF%8C%E4%BA%8C%E4%BB%A3_ev0t8c.mp4" controls playsinline></video>
             </div>
-            <div class="info">
-                <span class="tool-tag">9:16 VERTICAL</span>
-                <h3>真人剧项目 05</h3>
-            </div>
+            <div class="info"><span class="tool-tag">9:16 VERTICAL</span><h3>真人剧项目 05</h3></div>
         </div>
 
-        <!-- 项目 06-10 (B站横屏作品) -->
+        <!-- 06 保持横屏 -->
         <div class="work-card">
             <div class="video-wrapper landscape">
                 <iframe src="//player.bilibili.com/player.html?bvid=BV1nY9uBcEmr&page=1&high_quality=1" scrolling="no" allowfullscreen="true"></iframe>
             </div>
-            <div class="info">
-                <span class="tool-tag">ACTION 06</span>
-                <h3>保姆的秘密遗产</h3>
-            </div>
+            <div class="info"><span class="tool-tag">ACTION 06</span><h3>保姆的秘密遗产</h3></div>
         </div>
 
+        <!-- 07-10 变更为竖屏 (已修改为 portrait) -->
         <div class="work-card">
-            <div class="video-wrapper landscape">
+            <div class="video-wrapper portrait">
                 <iframe src="//player.bilibili.com/player.html?bvid=BV1pk9KB4EUP&page=1" scrolling="no" allowfullscreen="true"></iframe>
             </div>
-            <div class="info">
-                <span class="tool-tag">ACTION 07</span>
-                <h3>血坠少女</h3>
-            </div>
+            <div class="info"><span class="tool-tag">ACTION 07</span><h3>血坠少女</h3></div>
         </div>
 
         <div class="work-card">
-            <div class="video-wrapper landscape">
+            <div class="video-wrapper portrait">
                 <iframe src="//player.bilibili.com/player.html?bvid=BV1zQ9KBnEGX&page=1" scrolling="no" allowfullscreen="true"></iframe>
             </div>
-            <div class="info">
-                <span class="tool-tag">ACTION 08</span>
-                <h3>我领养的每只宠物</h3>
-            </div>
+            <div class="info"><span class="tool-tag">ACTION 08</span><h3>我领养的每只宠物</h3></div>
         </div>
 
         <div class="work-card">
-            <div class="video-wrapper landscape">
+            <div class="video-wrapper portrait">
                 <iframe src="//player.bilibili.com/player.html?bvid=BV1A69KBZEXU&page=1" scrolling="no" allowfullscreen="true"></iframe>
             </div>
-            <div class="info">
-                <span class="tool-tag">ACTION 09</span>
-                <h3>血色将至</h3>
-            </div>
+            <div class="info"><span class="tool-tag">ACTION 09</span><h3>血色将至</h3></div>
         </div>
 
         <div class="work-card">
-            <div class="video-wrapper landscape">
+            <div class="video-wrapper portrait">
                 <iframe src="//player.bilibili.com/player.html?bvid=BV1MgDrBsE5x&page=1" scrolling="no" allowfullscreen="true"></iframe>
             </div>
-            <div class="info">
-                <span class="tool-tag">ACTION 10</span>
-                <h3>她的吻</h3>
-            </div>
+            <div class="info"><span class="tool-tag">ACTION 10</span><h3>她的吻</h3></div>
         </div>
     </div>
 </section>
 
-<!-- 动态漫部分 -->
+<!-- 动态漫系列保持原样 -->
 <section id="comics" class="category-section">
     <div class="category-header">
         <h2>🎬 动态漫系列</h2>
     </div>
     <div class="container">
-        <!-- 动态漫 01 -->
-        <div class="work-card">
-            <div class="video-wrapper landscape">
-                <iframe src="//player.bilibili.com/player.html?bvid=BV1kC9KB9ET1&page=1" scrolling="no" allowfullscreen="true"></iframe>
-            </div>
-            <div class="info">
-                <span class="tool-tag">COMIC 01</span>
-                <h3>猫仙</h3>
-            </div>
-        </div>
-
-        <!-- 动态漫 02 (找回来了) -->
-        <div class="work-card">
-            <div class="video-wrapper landscape">
-                <iframe src="//player.bilibili.com/player.html?bvid=BV1UL9uBrE6k&page=1" scrolling="no" allowfullscreen="true"></iframe>
-            </div>
-            <div class="info">
-                <span class="tool-tag">COMIC 02</span>
-                <h3>弟子们都想以下犯上</h3>
-            </div>
-        </div>
-
-        <!-- 动态漫 03 (找回来了) -->
-        <div class="work-card">
-            <div class="video-wrapper landscape">
-                <iframe src="https://player.cloudinary.com/embed/?cloud_name=dakas72xv&public_id=15_hywwpa" allowfullscreen="true"></iframe>
-            </div>
-            <div class="info">
-                <span class="tool-tag">COMIC 03</span>
-                <h3>华夏入侵</h3>
-            </div>
-        </div>
+        <div class="work-card"><div class="video-wrapper landscape"><iframe src="//player.bilibili.com/player.html?bvid=BV1kC9KB9ET1&page=1" scrolling="no" allowfullscreen="true"></iframe></div><div class="info"><h3>猫仙</h3></div></div>
+        <div class="work-card"><div class="video-wrapper landscape"><iframe src="//player.bilibili.com/player.html?bvid=BV1UL9uBrE6k&page=1" scrolling="no" allowfullscreen="true"></iframe></div><div class="info"><h3>弟子们都想以下犯上</h3></div></div>
+        <div class="work-card"><div class="video-wrapper landscape"><iframe src="https://player.cloudinary.com/embed/?cloud_name=dakas72xv&public_id=15_hywwpa" allowfullscreen="true"></iframe></div><div class="info"><h3>华夏入侵</h3></div></div>
     </div>
 </section>
 
