@@ -70,15 +70,14 @@
 
         .category-header h2 { font-size: 2.2rem; margin: 0; }
 
-        /* --- 调大小的核心代码开始 --- */
+        /* 调整格子的基础宽度 */
         .container {
             display: grid;
-            /* 这里的 600px 可以手动调小（如 450px）让排版更紧凑 */
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); 
+            /* 这里的 600px 可以根据你的喜好调大或调小 */
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
             gap: 40px;
             align-items: start;
         }
-        /* --- 调大小的核心代码结束 --- */
 
         .work-card {
             background: var(--card-bg);
@@ -100,7 +99,7 @@
             background: #000;
         }
 
-        /* 比例控制 */
+        /* 比例控制类名 */
         .video-wrapper.landscape { aspect-ratio: 16/9; }
         .video-wrapper.portrait { aspect-ratio: 9/16; }
 
@@ -167,7 +166,7 @@
             </div>
         </div>
 
-        <!-- 02-05 已经是竖屏 -->
+        <!-- 02-05 竖屏 -->
         <div class="work-card">
             <div class="video-wrapper portrait">
                 <video src="https://res.cloudinary.com/dakas72xv/video/upload/q_auto/f_auto/v1781320035/41_gp6as6.mp4" controls playsinline></video>
@@ -196,46 +195,45 @@
             <div class="info"><span class="tool-tag">9:16 VERTICAL</span><h3>真人剧项目 05</h3></div>
         </div>
 
-        <!-- 06 保持横屏 -->
+        <!-- 06 现在改成了竖屏 portrait -->
         <div class="work-card">
-            <div class="video-wrapper landscape">
-                <iframe src="//player.bilibili.com/player.html?bvid=BV1nY9uBcEmr&page=1&high_quality=1" scrolling="no" allowfullscreen="true"></iframe>
+            <div class="video-wrapper portrait">
+                <iframe src="//player.bilibili.com/player.html?bvid=BV1nY9uBcEmr&page=1&high_quality=1&danmaku=0" scrolling="no" allowfullscreen="true"></iframe>
             </div>
-            <div class="info"><span class="tool-tag">ACTION 06</span><h3>保姆的秘密遗产</h3></div>
+            <div class="info"><span class="tool-tag">9:16 VERTICAL</span><h3>保姆的秘密遗产</h3></div>
         </div>
 
-        <!-- 07-10 变更为竖屏 (已修改为 portrait) -->
+        <!-- 07-10 竖屏 -->
         <div class="work-card">
             <div class="video-wrapper portrait">
                 <iframe src="//player.bilibili.com/player.html?bvid=BV1pk9KB4EUP&page=1" scrolling="no" allowfullscreen="true"></iframe>
             </div>
-            <div class="info"><span class="tool-tag">ACTION 07</span><h3>血坠少女</h3></div>
+            <div class="info"><span class="tool-tag">9:16 VERTICAL</span><h3>血坠少女</h3></div>
         </div>
 
         <div class="work-card">
             <div class="video-wrapper portrait">
                 <iframe src="//player.bilibili.com/player.html?bvid=BV1zQ9KBnEGX&page=1" scrolling="no" allowfullscreen="true"></iframe>
             </div>
-            <div class="info"><span class="tool-tag">ACTION 08</span><h3>我领养的每只宠物</h3></div>
+            <div class="info"><span class="tool-tag">9:16 VERTICAL</span><h3>我领养的每只宠物</h3></div>
         </div>
 
         <div class="work-card">
             <div class="video-wrapper portrait">
                 <iframe src="//player.bilibili.com/player.html?bvid=BV1A69KBZEXU&page=1" scrolling="no" allowfullscreen="true"></iframe>
             </div>
-            <div class="info"><span class="tool-tag">ACTION 09</span><h3>血色将至</h3></div>
+            <div class="info"><span class="tool-tag">9:16 VERTICAL</span><h3>血色将至</h3></div>
         </div>
 
         <div class="work-card">
             <div class="video-wrapper portrait">
                 <iframe src="//player.bilibili.com/player.html?bvid=BV1MgDrBsE5x&page=1" scrolling="no" allowfullscreen="true"></iframe>
             </div>
-            <div class="info"><span class="tool-tag">ACTION 10</span><h3>她的吻</h3></div>
+            <div class="info"><span class="tool-tag">9:16 VERTICAL</span><h3>她的吻</h3></div>
         </div>
     </div>
 </section>
 
-<!-- 动态漫系列保持原样 -->
 <section id="comics" class="category-section">
     <div class="category-header">
         <h2>🎬 动态漫系列</h2>
